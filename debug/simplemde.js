@@ -16972,7 +16972,7 @@ function _replaceSelection(cm, active, startEnd, url) {
 	} else {
 		text = cm.getSelection();
 		if(text === "") {
-			text = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			text = "     ";
 		}
 		cm.replaceSelection(start + text + end);
 
