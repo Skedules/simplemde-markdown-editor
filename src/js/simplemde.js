@@ -617,7 +617,7 @@ function drawLink(editor) {
 	var cm = editor.codemirror;
 	var stat = getState(cm);
 	var options = editor.options;
-	var url = "http://";
+	var url = "http://www.example.com";
 	if(options.promptURLs) {
 		url = prompt(options.promptTexts.link);
 		if(!url) {
@@ -810,6 +810,9 @@ function _replaceSelection(cm, active, startEnd, url) {
 		});
 	} else {
 		text = cm.getSelection();
+		if (text === '') {
+			text = "Link Text";
+		}
 		cm.replaceSelection(start + text + end);
 
 		startPoint.ch += start.length;
