@@ -810,7 +810,7 @@ function _replaceSelection(cm, active, startEnd, url) {
 		});
 	} else {
 		text = cm.getSelection();
-		if (text === '') {
+		if(text === "") {
 			text = "Link Text";
 		}
 		cm.replaceSelection(start + text + end);
