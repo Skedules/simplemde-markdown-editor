@@ -811,7 +811,7 @@ function _replaceSelection(cm, active, startEnd, url) {
 	} else {
 		text = cm.getSelection();
 		if(text === "") {
-			text = "Link Text";
+			text = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 		}
 		cm.replaceSelection(start + text + end);
 
